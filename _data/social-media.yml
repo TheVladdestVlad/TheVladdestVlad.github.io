@@ -14,11 +14,11 @@ twitter:
   id: 'your-twitter-name'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
-  fa-icon: 'fab-twitter-square'
+  fa-icon: 'fa-twitter-square'
 
 github:
   id: 'your-github-name'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'fab-github-square'
+  fa-icon: 'fa-github-square'
 
