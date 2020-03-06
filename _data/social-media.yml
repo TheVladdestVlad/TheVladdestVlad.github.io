@@ -8,7 +8,6 @@ facebook:
   id: 'your-facebook-username'
   href: 'https://www.facebook.com/'
   title: 'Facebook'
-  class: 'fab fa-facebook-square'
   fa-icon: 'fa-facebook-square'
 
 twitter:
