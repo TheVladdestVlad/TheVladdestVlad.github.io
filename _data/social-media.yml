@@ -8,7 +8,7 @@ facebook:
   id: 'your-facebook-username'
   href: 'https://www.facebook.com/'
   title: 'Facebook'
-  fa-icon: 'fa-facebook-square'
+  fa-icon: 'fa-facebook-f'
 
 twitter:
   id: 'your-twitter-name'
