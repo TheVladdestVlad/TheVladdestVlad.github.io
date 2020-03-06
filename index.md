@@ -5,6 +5,9 @@ You can use the [editor on GitHub](https://github.com/TheVladdestVlad/TheVladdes
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 [Name of Link]({% post_url 2020-03-02-test %})
 ### Markdown
+1. First line
+- first bullet
+- second bullet
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
