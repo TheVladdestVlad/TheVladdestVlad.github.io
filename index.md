@@ -46,16 +46,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 {% include archive.html %} 
 
-
-{% if site.data.social-media %}
-<div id="social-media">
-    {% assign sm = site.data.social-media %}
-    {% for entry in sm %}
-        {% assign key = entry | first %}
-        {% if sm[key].id %}
-            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }}"></i></a>
-        {% endif %}
-    {% endfor %}
-</div>
-{% endif %}
-
+{% include social-media-links.html %}
