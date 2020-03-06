@@ -7,3 +7,6 @@ github_username: "<github_username>"
 facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
 linkedin_id: "<linkedin_id>"
+#blog pagination settings
+paginate: 5
+paginate_path: "/blog/page:num/"
