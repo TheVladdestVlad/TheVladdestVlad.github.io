@@ -44,7 +44,8 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   {% endfor %}
 </ul>
 
-{% include archive.html %}
+{% include archive.html %} 
+
 
 {% if site.data.social-media %}
 <div id="social-media">
@@ -57,3 +58,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
     {% endfor %}
 </div>
 {% endif %}
+
