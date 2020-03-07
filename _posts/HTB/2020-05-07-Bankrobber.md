@@ -71,6 +71,7 @@ This checks out with the note found in the admin notes.txt file, which also outl
 ![notes](/assets/images/HTB/Bankrobber/notes.jpg)
 
 Using a simple SQL injection test it turns out that the "Search users" functionality is vulnerable to SQL injection.
+
 ![SQLI1](/assets/images/HTB/Bankrobber/SQLI1.jpg)
 
 ## SQL injection
@@ -84,7 +85,7 @@ Explanation:
 - "union all" cobmines the result set from the actual user search query with the result set from the query I actually want to execute.
 - 12 and 1 from my select statement are just fillers so that the number of columns from the user search result set matches the number of columns from my select's result set (if the number of columns from the two result sets doesn't match, the query will error out and fail to return any useful information. The number of columns in the user search result set can be found in checking the response of a normal search in Burp.
 - current_user() is the function that actually returns the name of the user currently connected to the database.
-- "--" (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
+- `--` (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
 - the last dash is just used as a delimiter from the double-dash and the single-quote.
 ![getdbuser](/assets/images/HTB/Bankrobber/getdbuser.jpg)
 
