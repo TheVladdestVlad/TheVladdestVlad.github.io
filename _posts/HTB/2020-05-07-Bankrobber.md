@@ -3,6 +3,7 @@ permalink: /posts/HTB/Bankrobber
 layout: post
 author: Vlad
 title:  "Bankrobber Writeup"
+date: 2020-03-07 19:30
 tags: HTB Windows SQLi XSS
 ---
 # Bankrobber - 10.10.10.154
