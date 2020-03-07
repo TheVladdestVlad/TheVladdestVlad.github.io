@@ -34,11 +34,11 @@ While dirb was running, i continued poking around the website to see what I can 
 
 ### Testing site registration
 
-Accessing the Register page, I'm presented with a registration form which I use to create an account.
+Accessing the Register page, I'm presented with a registration form which I use to create an account. 
 ![registeronsite](/assets/images/HTB/Bankrobber/registeronsite.jpg)
 
 And, once logged in with the newly created user account, I can access the E-coin transfer form.
-I initiate a transfer to see what happens.
+I initiate a transfer to see what happens. 
 ![transfercointest](/assets/images/HTB/Bankrobber/transfercointest.jpg)
 
 Judging by this message it looks like the site's admin or, more likely, a job running as the site's admin is 
@@ -83,12 +83,12 @@ Explanation:
 - the apostrophe/single-quote closes the string delimitation for the id search.
 - "union all" cobmines the result set from the actual user search query with the result set from the query I actually want to execute.
 - 12 and 1 from my select statement are just fillers so that the number of columns from the user search result set matches the number of columns from my select's result set (if the number of columns from the two result sets doesn't match, the query will error out and fail to return any useful information. The number of columns in the user search result set can be found in checking the response of a normal search in Burp.
-- current_user() is the function that actually returns the name of the user currently connected to the database 
-- -- (double-dash) is used to comment out the single-quote used in the original query that is now orphaned
-- the last dash is just used as a delimiter from the double-dash and the single-quote
+- current_user() is the function that actually returns the name of the user currently connected to the database.
+- -- (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
+- the last dash is just used as a delimiter from the double-dash and the single-quote.
 ![getdbuser](/assets/images/HTB/Bankrobber/getdbuser.jpg)
 
-This is how the request looks in Burp
+This is how the request looks in Burp:
 ![burp_currentuser_sqli](/assets/images/HTB/Bankrobber/burp_currentuser_sqli.jpg) 
 
 It looks like I should have all the permissions required to read the contents of files, so I should see what backdoorchecker.php does.
@@ -104,7 +104,9 @@ Looking through the code it looks like there are some requirements for the comma
 3. the command cannot contain "$(" or "&".
 To execute code, I can just craft the command in such a way that it bypasses the command restrictions.
 Something like 
-```dirfail || <actual command>```
+```
+dirfail || <actual command>
+```
 should wourk with "dirfail" being considered valid by backdoorchecker.php, but not being an actual Windows command, which means that it would fail but then, the || (or operator) will pass on the command i actually want to execute.
 This can be exploited with a modified [nishang Invoke-PowershellTCP.ps1](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) to gain a reverse shell.
 
@@ -138,13 +140,13 @@ Looks like the user i'm connected as is Cortin, time to get the user flag.
 ![User_flag](/assets/images/HTB/Bankrobber/User_flag.jpg)
 
 ## Further enumeration on the Host
-Looking through the file ssytem, I find an interesting .exe file in the root of the C:\ drive
+Looking through the file ssytem, I find an interesting .exe file in the root of the C:\ drive.
 ![dirC](/assets/images/HTB/Bankrobber/dirC.jpg)
 
 It looks like it is a currently running processes.
 ![processes](/assets/images/HTB/Bankrobber/processes.jpg)
 
-And it's most likely the process that's listening internally on port 910
+And it's most likely the process that's listening internally on port 910.
 ![netstat](/assets/images/HTB/Bankrobber/netstat.jpg)
 
 ## Connecting to the bankv2 service
