@@ -37,8 +37,7 @@ While dirb was running, i continued poking around the website to see what I can 
 Accessing the Register page, I'm presented with a registration form which I use to create an account. 
 ![registeronsite](/assets/images/HTB/Bankrobber/registeronsite.jpg)
 
-And, once logged in with the newly created user account, I can access the E-coin transfer form.
-I initiate a transfer to see what happens. 
+And, once logged in with the newly created user account, I can access the E-coin transfer form. I initiate a transfer to see what happens.
 ![transfercointest](/assets/images/HTB/Bankrobber/transfercointest.jpg)
 
 Judging by this message it looks like the site's admin or, more likely, a job running as the site's admin is 
