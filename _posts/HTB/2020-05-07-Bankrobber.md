@@ -38,6 +38,7 @@ Accessing the Register page, I'm presented with a registration form which I use 
 ![registeronsite](/assets/images/HTB/Bankrobber/registeronsite.jpg)
 
 And, once logged in with the newly created user account, I can access the E-coin transfer form. I initiate a transfer to see what happens.
+
 ![transfercointest](/assets/images/HTB/Bankrobber/transfercointest.jpg)
 
 Judging by this message it looks like the site's admin or, more likely, a job running as the site's admin is 
@@ -83,7 +84,7 @@ Explanation:
 - "union all" cobmines the result set from the actual user search query with the result set from the query I actually want to execute.
 - 12 and 1 from my select statement are just fillers so that the number of columns from the user search result set matches the number of columns from my select's result set (if the number of columns from the two result sets doesn't match, the query will error out and fail to return any useful information. The number of columns in the user search result set can be found in checking the response of a normal search in Burp.
 - current_user() is the function that actually returns the name of the user currently connected to the database.
--  -- (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
+- "--" (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
 - the last dash is just used as a delimiter from the double-dash and the single-quote.
 ![getdbuser](/assets/images/HTB/Bankrobber/getdbuser.jpg)
 
@@ -97,7 +98,7 @@ Since the output might be larger than the user search page could output, I'll do
 And this is what backdoorchecker.php looks like in Burp.
 ![backdoorchecker](/assets/images/HTB/Bankrobber/backdoorchecker.jpg)
 
-Looking through the code it looks like there are some requirements for the command passed to backdoorchecker.php to be successful:
+Looking through the code it looks like there are three requirements for the command passed to backdoorchecker.php to be successful:
 1. it should be called from localhost (from the webserver).
 2. the command should start with "dir" - the logic behind this is that it would only allow the dir command that's used to list directories in Windows, but this can be bypassed. 
 3. the command cannot contain "$(" or "&".
