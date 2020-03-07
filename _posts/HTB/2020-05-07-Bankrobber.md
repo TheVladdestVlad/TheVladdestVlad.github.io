@@ -6,7 +6,12 @@ title:  "Bankrobber Writeup"
 date: 2020-03-07 19:30
 tags: HTB Windows SQLi XSS
 ---
-# Bankrobber - 10.10.10.154
+# Hackthebox - Bankrobber - 10.10.10.154
+
+## Summary
+Today [Hackthebox](https://www.hackthebox.eu) retired Bankrobber, an insane-rated Windows box.
+Here's my write-up.
+
 ![InfoCard](/assets/images/HTB/Bankrobber/InfoCard.jpg)
 
 ## Enumeration
