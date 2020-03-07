@@ -201,6 +201,7 @@ Connecting to the service with the correct PIN gives me the option to execute an
 
 ## Exploiting bankv2
 To exploit bankv2 in order to get a Meterpreter shell as admin, I created another obfuscated payload for port 4466, copied it to C:\Users\Cortin\Desktop\test (where i copied the previous payload.exe file) using the initial reverse shell, I started another Meterpreter listener for port 4466.
+
 ![meterpreter2](/assets/images/HTB/Bankrobber/meterpreter2.jpg)
 
 And then executed the payload2.exe file by passing the following input to bankv2's E-coin transfer:
