@@ -4,20 +4,20 @@ email:
   title: 'Email'
   fa-icon: 'fa-envelope'
 
-facebook:
-  id: 'your-facebook-username'
-  href: 'https://www.facebook.com/'
-  title: 'Facebook'
-  fa-icon: 'fa-facebook-square'
+linkedin:
+  id: 'vlad-drumea-975848121'
+  href: 'https://www.linkedin.com/'
+  title: 'Linkedin'
+  fa-icon: 'fa-linkedin-square'
 
 twitter:
-  id: 'your-twitter-name'
+  id: 'TheVladdestVlad'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
   fa-icon: 'fa-twitter-square'
 
 github:
-  id: 'your-github-name'
+  id: 'TheVladdestVlad'
   href: 'https://github.com/'
   title: 'GitHub'
   fa-icon: 'fa-github-square'
