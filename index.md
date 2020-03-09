@@ -3,7 +3,7 @@
 ```
 Will add some more content to the index page soon
 ```
-
+## Blog Posts
 <ul>
   {% for post in site.posts %}
     <li>
