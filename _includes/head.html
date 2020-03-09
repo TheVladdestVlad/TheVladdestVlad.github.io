@@ -1,4 +1,9 @@
 {% if site.tags != "" %}
   {% include collecttags.html %}
 {% endif %}
-
+<head>
+{% if page.header-img %}
+    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+{% endif %}
+<meta property="og:description" content="{{ page.subtitle }}" />
+</head>
