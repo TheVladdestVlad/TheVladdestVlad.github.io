@@ -1,4 +1,3 @@
-
 ---
 permalink: /posts/HTB/Bankrobber
 layout: post
@@ -10,7 +9,6 @@ subtitle: "Hackthebox's Bankrobber is an insane-rated Windows box that hosts a b
 date: 2020-03-07 19:30
 tags: [HTB, Windows, SQLi, XSS]
 ---
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 # Hackthebox - Bankrobber - 10.10.10.154
 
 ## Summary
