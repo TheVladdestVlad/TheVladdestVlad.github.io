@@ -1,3 +1,6 @@
+---
+layout: page
+---
 ## Index page is currently under construction
 
 ```
