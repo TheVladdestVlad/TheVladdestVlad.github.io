@@ -220,3 +220,5 @@ And got a Meterpreter shell with admin privileges.
 Which I then used to get the root flag.
 
 ![rootflag](/assets/images/HTB/Bankrobber/rootflag.jpg)
+
+And that's pretty much it.
