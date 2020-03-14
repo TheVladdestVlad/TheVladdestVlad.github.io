@@ -22,8 +22,8 @@ github:
   title: 'GitHub'
   fa-icon: 'fa-github-square'
 
-HTB:
+HackTheBox:
   id: '142419'
   href: 'https://www.hackthebox.eu/profile/'
-  title: 'HTB'
+  title: 'HackTheBox'
   fa-icon: 'fa-desktop'
