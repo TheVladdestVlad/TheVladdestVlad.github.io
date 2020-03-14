@@ -1,8 +1,8 @@
-email:
-  id: 'your.name@yoursite.com'
-  href: 'mailto:'
-  title: 'Email'
-  fa-icon: 'fa-envelope'
+#email:
+#  id: 'your.name@yoursite.com'
+#  href: 'mailto:'
+#  title: 'Email'
+#  fa-icon: 'fa-envelope'
 
 linkedin:
   id: 'vlad-drumea-975848121'
