@@ -8,3 +8,5 @@ paginate_path: "/blog/page:num/"
 # timezone 
 timezone: Europe/Bucharest
 url: https://TheVladdestVlad.github.io
+#sidebar config
+sidebars: home_sidebar
