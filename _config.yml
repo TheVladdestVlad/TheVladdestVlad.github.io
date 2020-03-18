@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
 # ------------------------------------------------------------------------------
 # Custom settings
 # ------------------------------------------------------------------------------
@@ -10,3 +10,4 @@ timezone: Europe/Bucharest
 url: https://TheVladdestVlad.github.io
 #sidebar config
 sidebars: home_sidebar
+remote_theme: mmistakes/minimal-mistakes
