@@ -6,7 +6,10 @@
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+{% if page.header-img %}
+    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+{% endif %}
+<meta property="og:description" content="{{ page.subtitle }}" />
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
