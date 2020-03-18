@@ -107,16 +107,16 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-       url: "https://twitter.com/TheVladdestVlad"
+      url: "https://twitter.com/TheVladdestVlad"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/TheVladdestVlad"
+      url: "https://github.com/TheVladdestVlad"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-       url: "https://www.linkedin.com/in/vlad-drumea-975848121/"
+      url: "https://www.linkedin.com/in/vlad-drumea-975848121/"
 
 # Site Footer
 footer:
