@@ -21,7 +21,7 @@ title_separator          : "-"
 #subtitle                 : "Database and InfoSec related blog"
 name                     : "Vlad"
 description              : "Database and InfoSec related blog"
-url                      : "TheVladdestVlad.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "TheVladdestVlad.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "TheVladdestVlad/TheVladdestVlad.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
