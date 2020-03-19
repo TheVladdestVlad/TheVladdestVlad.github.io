@@ -1,9 +1,0 @@
-<!-- https://dev.twitter.com/cards/overview -- https://conductofcode.io/post/social-meta-tags-with-jekyll/-->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}" />
-  {% if page.image %}
-  <meta name="twitter:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}{{ page.image.path }}" />
-  {% endif %}
