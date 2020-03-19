@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "TheVladdestVlad.github.io"
 title_separator          : "-"
-subtitle                 : "Database and InfoSec related blog"
+#subtitle                 : "Database and InfoSec related blog"
 name                     : "Vlad"
 description              : "Database and InfoSec related blog"
 url                      : "TheVladdestVlad.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -70,19 +70,20 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : &twitter "thevladdestvlad"
 facebook:
-  username               :
+  username               : &facebook "vlad.drumea"
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+#og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-
+   - "https://twitter.com/thevladdestvlad"
+   - "https://www.linkedin.com/in/vlad-drumea-975848121/"
 # Analytics
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
