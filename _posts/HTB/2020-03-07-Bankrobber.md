@@ -7,7 +7,6 @@ header:
   description: "Hackthebox's Bankrobber is an insane-rated Windows box that hosts a banking website and cryptocurrency transfer related services. This is my write-up on how to gain access and privilege escalation on it."
 categories: 
   - CTF
-subtitle: "Hackthebox's Bankrobber is an insane-rated Windows box that hosts a banking website and cryptocurrency transfer related services. This is my write-up on how to gain access and privilege escalation on it."
 date: 2020-03-07 19:30
 tags: HTB Windows SQLi XSS
 ---
