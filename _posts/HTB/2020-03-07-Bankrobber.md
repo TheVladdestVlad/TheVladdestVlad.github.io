@@ -4,7 +4,7 @@ title: "HTB Bankrobber Write-up"
 header-img: "/assets/images/HTB/Bankrobber/InfoCard.jpg"
 header:
   teaser: "/assets/images/HTB/Bankrobber/InfoCard.jpg"
-  description: "Hackthebox's Bankrobber is an insane-rated Windows box that hosts a banking website and cryptocurrency transfer related services. This is my write-up on how to gain access and privilege escalation on it."
+description: "Hackthebox's Bankrobber is an insane-rated Windows box that hosts a banking website and cryptocurrency transfer related services. This is my write-up on how to gain access and privilege escalation on it."
 categories: 
   - CTF
 date: 2020-03-07 19:30
