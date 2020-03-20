@@ -18,11 +18,11 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "TheVladdestVlad.github.io"
 title_separator          : "-"
-#subtitle                 : "Database and InfoSec related blog"
-name                     : "Vlad"
-description              : "Database and InfoSec related blog"
+subtitle                 : "Database and InfoSec related blog"
+name                     : &name "Vlad Drumea" # &name is a YAML anchor which can be *referenced later
+description              : &description "This is a place where I write stuff that I find interesting"
 url                      : "https://TheVladdestVlad.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "TheVladdestVlad/TheVladdestVlad.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -94,10 +94,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Vlad"
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Just some person on the internet."
-  location         : "Somewhere"
+  bio              : "Just some IT person on the internet."
+  location         : "Cluj-Napoca, RO"
   email            :
   links:
     - label: "Email"
@@ -211,8 +211,8 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: Europe/Bucharest # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
