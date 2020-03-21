@@ -119,7 +119,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/vlad-drumea-975848121/"
     - label: "HackTheBox"
-      icon: "fa-desktop"
+      icon: "fas fa-desktop"
       url: "https://www.hackthebox.eu/profile/142419"
 
 # Site Footer
@@ -147,7 +147,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/vlad-drumea-975848121/"
     - label: "HackTheBox"
-      icon: "fa-desktop"
+      icon: "fas fa-desktop"
       url: "https://www.hackthebox.eu/profile/142419"
 
 
