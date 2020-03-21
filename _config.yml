@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "TheVladdestVlad.github.io"
 title_separator          : "-"
 subtitle                 : "Database and InfoSec related blog"
-name                     : &name "Vlad Drumea" # &name is a YAML anchor which can be *referenced later
+name                     : &name "Vlad" # &name is a YAML anchor which can be *referenced later
 description              : &description "This is a place where I write stuff that I find interesting"
 url                      : "https://TheVladdestVlad.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
