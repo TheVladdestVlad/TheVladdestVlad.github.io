@@ -38,7 +38,7 @@ At a first glance, it looks like the site is a cryptocurrency exchange.
 
 I started dirb with its default wordlist to see if it can find anything that might be of interest for later use.
 ```
-dirb http://10.10.10.154/ -i -X html,,txt,xml,php -z 10 -o dirbout.txt
+dirb http://10.10.10.154/ -i -X .html,,.txt,.xml,.php -z 10 -o dirbout.txt
 ```
 
 While dirb was running, i continued poking around the website to see what I can find.
