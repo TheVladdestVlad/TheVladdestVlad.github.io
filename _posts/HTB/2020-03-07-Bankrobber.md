@@ -125,7 +125,7 @@ This can be exploited with a modified [nishang Invoke-PowershellTCP.ps1](https:/
 ## Foothold and user flag
 In order to do so I'll use the XSS vulnerability in teh E-coin transfer form to call backdoorchecker.php and use it to load the modified PowerShell script to memory and execute it.
 
-In my working directory I've created another directory to host and smb file share containing the PowerShell script using Impacket's smbserver tool.
+In my working directory I've created another directory to host an smb file share containing the PowerShell script using Impacket's smbserver tool.
 ```
 impacket-smbserver -smb2support test 'pwd'
 ```
@@ -190,6 +190,7 @@ I configured the port tunnel.
 ![porttunnel](/assets/images/HTB/Bankrobber/porttunnel.jpg)
 
 And then used ncat to connect to the port that bankv2.exe was listening on.
+
 ![connected_to_bankv2exe](/assets/images/HTB/Bankrobber/connected_to_bankv2exe.jpg)
 
 The connection to bankv2 is closed pretty fast if there is no interaction and it seems that bankv2 is requesting a 4 digit PIN and, after trying a couple few times with random PINs, I resorted to using a loop to go through all the possible combinations of 0000-9999.
