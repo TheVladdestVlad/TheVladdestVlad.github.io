@@ -119,7 +119,7 @@ Something like
 ```
 dirfail || <actual command>
 ```
-should wourk with "dirfail" being considered valid by backdoorchecker.php, but not being an actual Windows command, which means that it would fail but then, the || (or operator) will pass on the command i actually want to execute.
+should work with "dirfail" being considered valid by backdoorchecker.php, but not being an actual Windows command, which means that it would fail, but then the || (or operator) will pass on the command i actually want to execute.
 This can be exploited with a modified [nishang Invoke-PowershellTCP.ps1](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) to gain a reverse shell.
 
 ## Foothold and user flag
