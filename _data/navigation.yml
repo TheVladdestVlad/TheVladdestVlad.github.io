@@ -7,6 +7,6 @@ main:
    - title: "Posts by Year"
      url: /year-archive/
    - title: "Posts by Tags"
-     url: /tag-archive/
+     url: /tags/
   # - title: "Sitemap"
   #   url: /sitemap/
