@@ -41,7 +41,7 @@ At this point I have an initial foothold on the target, but it does seem that th
 
 ## Enumeration as www-data and privilege escalation to user
 
-Looking through the directories of the target, I find a home directory for a user named david, but i do not have permission to list its contents.
+Looking through the directories of the target, I find a home directory for a user named david, but I do not have permission to list its contents.
 
 ![home](/assets/images/HTB/Traverxec/home.jpg)
 
@@ -85,11 +85,11 @@ Now, I can ssh as david and get the user flag
 
 ## Privilege escalation and root flag
 
-Upon further inspection of david's home directori I find an interesting script located in /home/david/bin/
+Upon further inspection of david's home directory, I find an interesting script located in /home/david/bin/
 
 ![script](/assets/images/HTB/Traverxec/script.jpg)
 
-It looks like david can call [journalctl](https://gtfobins.github.io/gtfobins/journalctl/) as sudo.
+It looks like david can call [journalctl](https://gtfobins.github.io/gtfobins/journalctl/) using sudo.
 journalctl uses [less](https://gtfobins.github.io/gtfobins/less/) as a pager, and less sometimes doesn't exit if the terminal isn't wide enough.
 So I make my terminal narrower and then run
 ```
