@@ -76,9 +76,10 @@ And I then use john to get the password from the resulting hash.
 ![davidrsapass](/assets/images/HTB/Traverxec/davidrsapass.jpg)
 
 The password is __hunter__
+
 2. I need to change the permissions on the david_rsa file using ```chmod 400 david_rsa``` so that i can use it with ssh
 
-No i can ssh as david and get the user flag
+Now, I can ssh as david and get the user flag
 
 ![davidssh](/assets/images/HTB/Traverxec/davidssh.jpg)
 
