@@ -8,5 +8,7 @@ main:
      url: /year-archive/
    - title: "Posts by Tags"
      url: /tags/
+   - title: "Posts by Category"
+     url: /categories/
   # - title: "Sitemap"
   #   url: /sitemap/
