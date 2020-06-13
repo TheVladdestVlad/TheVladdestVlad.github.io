@@ -7,7 +7,7 @@ header:
 description: "Hackthebox's Monteverde is a medium-rated Windows machine acting as the on-prem DC for MEGABANK and hosting a SQL Server instance used by the ADSync service"
 categories: 
   - CTF
-date: 2020-06-13 19:40
+date: 2020-06-13 18:00
 tags: HTB Windows ADSync SQLServer
 ---
 # Hackthebox - Monteverde - 10.10.10.172
