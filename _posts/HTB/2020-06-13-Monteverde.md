@@ -90,7 +90,7 @@ It looks like I might have just found mhope's password and I'm able to use it to
 
 And here is the user flag.
 
-![UserFlag](/assets/images/HTB/Monteverde/UserFlag.png)
+![UserFlag2](/assets/images/HTB/Monteverde/UserFlag2.png)
 
 
 ## Privilege escalation and root flag
