@@ -67,7 +67,7 @@ This is how the request looks in Burp.
 
 In Burp i can see that my cookie contains my user ID, as well as my BASE64 encoded username and password.
 The request also references my user ID in fromID.
-The lsitener I've started earlier catches the admin cookie within a couple of minutes.
+The listener I've started earlier catches the admin cookie within a couple of minutes.
 ![admcookie](/assets/images/HTB/Bankrobber/admcookie.jpg)
 
 Decoding from BASE64 using [base64decode.org](https://www.base64decode.org/) reveales the following admin credentials:
@@ -93,7 +93,7 @@ Using the following search input I can find out more about the user account used
 Explanation:
 - 12 is a bogus id that most liekly doesn't exist, since mine is 7.
 - the apostrophe/single-quote closes the string delimitation for the id search.
-- "union all" cobmines the result set from the actual user search query with the result set from the query I actually want to execute.
+- "union all" combines the result set from the actual user search query with the result set from the query I actually want to execute.
 - 12 and 1 from my select statement are just fillers so that the number of columns from the user search result set matches the number of columns from my select's result set (if the number of columns from the two result sets doesn't match, the query will error out and fail to return any useful information. The number of columns in the user search result set can be found in checking the response of a normal search in Burp.
 - current_user() is the function that actually returns the name of the user currently connected to the database.
 - `--` (double-dash) is used to comment out the single-quote used in the original query that is now orphaned.
